@@ -1,0 +1,50 @@
+{
+  "approval_id": "user_visual_acceptance_20260905",
+  "confirmed_by": "user",
+  "user_statement": "好，通过",
+  "recorded_at": "2026-09-05T16:13:15+08:00",
+  "asset_version": "look_assets_m1_v2_002",
+  "basis": "用户在四套 M1 素材、SKU 检查页、四组对照及画质修复交付后明确回复通过；按本轮整体素材验收登记，不推断 M2 产品功能已验收。",
+  "look_image_sha256": {
+    "M1V2-LOOK-101": "5ee139730b19ebfe9d520db0dd5ad390fd6cb12a7630f8e338abe7959d18119e",
+    "M1V2-LOOK-112": "5c45d7fac17197ae521f9311b4c4f0bc695e88a32df11d8184783c5ff1ea361b",
+    "M1V2-LOOK-113": "b234da92a52b85035022f6c0c8de29d944124d3e9ac8b0ccb98b69f7ffd2cb10",
+    "M1V2-LOOK-116": "bcdf516c2078ada1c04780c922bcc26a77f64fd57f1b987ea39fcc08d3c63772"
+  },
+  "pairs": [
+    {
+      "from": "M1V2-LOOK-101",
+      "to": "M1V2-LOOK-112",
+      "hashes": {
+        "M1V2-LOOK-101": "5ee139730b19ebfe9d520db0dd5ad390fd6cb12a7630f8e338abe7959d18119e",
+        "M1V2-LOOK-112": "5c45d7fac17197ae521f9311b4c4f0bc695e88a32df11d8184783c5ff1ea361b"
+      }
+    },
+    {
+      "from": "M1V2-LOOK-112",
+      "to": "M1V2-LOOK-113",
+      "hashes": {
+        "M1V2-LOOK-112": "5c45d7fac17197ae521f9311b4c4f0bc695e88a32df11d8184783c5ff1ea361b",
+        "M1V2-LOOK-113": "b234da92a52b85035022f6c0c8de29d944124d3e9ac8b0ccb98b69f7ffd2cb10"
+      }
+    },
+    {
+      "from": "M1V2-LOOK-101",
+      "to": "M1V2-LOOK-116",
+      "hashes": {
+        "M1V2-LOOK-101": "5ee139730b19ebfe9d520db0dd5ad390fd6cb12a7630f8e338abe7959d18119e",
+        "M1V2-LOOK-116": "bcdf516c2078ada1c04780c922bcc26a77f64fd57f1b987ea39fcc08d3c63772"
+      }
+    },
+    {
+      "from": "M1V2-LOOK-116",
+      "to": "M1V2-LOOK-112",
+      "hashes": {
+        "M1V2-LOOK-112": "5c45d7fac17197ae521f9311b4c4f0bc695e88a32df11d8184783c5ff1ea361b",
+        "M1V2-LOOK-116": "bcdf516c2078ada1c04780c922bcc26a77f64fd57f1b987ea39fcc08d3c63772"
+      }
+    }
+  ],
+  "scope": "M1 fixed-model image assets, photographic quality and delivered SKU/pair review package",
+  "m2_product_acceptance": false
+}

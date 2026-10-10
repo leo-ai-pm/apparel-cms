@@ -1,0 +1,46 @@
+{
+  "name": "shoe-style-frontend",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "next dev --port 5180",
+    "build": "next build",
+    "start": "next start --port 5180",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "lint": "eslint components lib app tests",
+    "dev:partner": "NEXT_DIST_DIR=.next-partner-dev-20261010 BACKEND_BASE_URL=http://127.0.0.1:8092 next dev --hostname 127.0.0.1 --port 3092",
+    "start:partner": "NEXT_DIST_DIR=.next-partner-20261010 BACKEND_BASE_URL=http://127.0.0.1:8092 next start --hostname 127.0.0.1 --port 3092",
+    "build:partner": "NEXT_DIST_DIR=.next-partner-20261010 BACKEND_BASE_URL=http://127.0.0.1:8092 next build",
+    "build:live": "NEXT_DIST_DIR=.next-fullchain-20261010 BACKEND_BASE_URL=http://127.0.0.1:8092 next build",
+    "start:live": "NEXT_DIST_DIR=.next-fullchain-20261010 BACKEND_BASE_URL=http://127.0.0.1:8092 next start --hostname 127.0.0.1 --port 3092",
+    "build:workspace": "NEXT_DIST_DIR=.next-workspace-20261010 BACKEND_BASE_URL=http://127.0.0.1:8092 next build",
+    "start:workspace": "NEXT_DIST_DIR=.next-workspace-20261010 BACKEND_BASE_URL=http://127.0.0.1:8092 next start --hostname 127.0.0.1 --port 3092",
+    "build:direct": "NEXT_DIST_DIR=.next-direct-20261010 BACKEND_BASE_URL=http://127.0.0.1:8092 next build",
+    "start:direct": "NEXT_DIST_DIR=.next-direct-20261010 BACKEND_BASE_URL=http://127.0.0.1:8092 next start --hostname 127.0.0.1 --port 3092",
+    "build:direct-status": "NEXT_DIST_DIR=.next-direct-status-20261010 BACKEND_BASE_URL=http://127.0.0.1:8092 next build",
+    "start:direct-status": "NEXT_DIST_DIR=.next-direct-status-20261010 BACKEND_BASE_URL=http://127.0.0.1:8092 next start --hostname 127.0.0.1 --port 3092",
+    "build:demo-access": "NEXT_DIST_DIR=.next-demo-access-20261010 BACKEND_BASE_URL=http://127.0.0.1:8092 next build",
+    "start:demo-access": "NEXT_DIST_DIR=.next-demo-access-20261010 BACKEND_BASE_URL=http://127.0.0.1:8092 next start --hostname 127.0.0.1 --port 3092"
+  },
+  "dependencies": {
+    "@google/model-viewer": "^4.3.1",
+    "next": "^15.1.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@testing-library/dom": "^10.4.2",
+    "@testing-library/react": "^16.3.3",
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "eslint": "^9.39.5",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "jsdom": "^30.1.0",
+    "typescript": "^5.7.0",
+    "typescript-eslint": "^8.70.1",
+    "vitest": "^2.1.9"
+  }
+}

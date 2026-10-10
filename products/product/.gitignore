@@ -1,0 +1,27 @@
+.DS_Store
+.env
+.env.*
+!.env.example
+.venv/
+node_modules/
+.next/
+.pytest_cache/
+__pycache__/
+.vefaas/
+dist/
+build/
+coverage/
+backend/data/
+*.pyc
+*.pyo
+*.db
+*.sqlite
+*.sqlite3
+*.log
+*.tsbuildinfo
+
+# Local builds and private backup files
+.next-unified/
+.sync-backup*/
+*.db.*
+*.sqlite3.*

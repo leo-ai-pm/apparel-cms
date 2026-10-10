@@ -1,0 +1,158 @@
+[
+  {
+    "contract_version": "0.1.0",
+    "rule_set_version": "rules_m1_v2_001",
+    "rule_id": "M1V2-RULE-001",
+    "when_tokens": [
+      "scene:work_commute"
+    ],
+    "effect": {
+      "target_token": "style:urban_chic",
+      "score_delta": 1
+    },
+    "exceptions": [],
+    "sources": [
+      {
+        "kind": "public_reference",
+        "source_ref": "STYLE-01",
+        "note": "廓形与通勤场景的内部归纳，不等同所有职场规范。"
+      }
+    ],
+    "confidence": 0.45,
+    "active": true
+  },
+  {
+    "contract_version": "0.1.0",
+    "rule_set_version": "rules_m1_v2_001",
+    "rule_id": "M1V2-RULE-002",
+    "when_tokens": [
+      "prefer:refined"
+    ],
+    "effect": {
+      "target_token": "style:refined",
+      "score_delta": 1
+    },
+    "exceptions": [],
+    "sources": [
+      {
+        "kind": "public_reference",
+        "source_ref": "STYLE-02",
+        "note": "剪裁细节作为精致偏好的候选线索。"
+      }
+    ],
+    "confidence": 0.45,
+    "active": true
+  },
+  {
+    "contract_version": "0.1.0",
+    "rule_set_version": "rules_m1_v2_001",
+    "rule_id": "M1V2-RULE-003",
+    "when_tokens": [
+      "prefer:casual"
+    ],
+    "effect": {
+      "target_token": "style:casual",
+      "score_delta": 1
+    },
+    "exceptions": [
+      "dress_code:formal"
+    ],
+    "sources": [
+      {
+        "kind": "internal_expert",
+        "source_ref": "v2_rule_notes",
+        "note": "合成休闲标签命中；未经外部专家评审。"
+      }
+    ],
+    "confidence": 0.45,
+    "active": true
+  },
+  {
+    "contract_version": "0.1.0",
+    "rule_set_version": "rules_m1_v2_001",
+    "rule_id": "M1V2-RULE-004",
+    "when_tokens": [
+      "prefer:comfortable"
+    ],
+    "effect": {
+      "target_token": "heel:low",
+      "score_delta": 1
+    },
+    "exceptions": [],
+    "sources": [
+      {
+        "kind": "internal_expert",
+        "source_ref": "v2_rule_notes",
+        "note": "只对低跟标签加分，不承诺实际脚感。"
+      }
+    ],
+    "confidence": 0.45,
+    "active": true
+  },
+  {
+    "contract_version": "0.1.0",
+    "rule_set_version": "rules_m1_v2_001",
+    "rule_id": "M1V2-RULE-005",
+    "when_tokens": [
+      "prefer:comfortable"
+    ],
+    "effect": {
+      "target_token": "heel:flat",
+      "score_delta": 1
+    },
+    "exceptions": [],
+    "sources": [
+      {
+        "kind": "internal_expert",
+        "source_ref": "v2_rule_notes",
+        "note": "只对平底标签加分，不承诺实际脚感。"
+      }
+    ],
+    "confidence": 0.45,
+    "active": true
+  },
+  {
+    "contract_version": "0.1.0",
+    "rule_set_version": "rules_m1_v2_001",
+    "rule_id": "M1V2-RULE-006",
+    "when_tokens": [
+      "prefer:light"
+    ],
+    "effect": {
+      "target_token": "color:ivory",
+      "score_delta": 1
+    },
+    "exceptions": [],
+    "sources": [
+      {
+        "kind": "internal_expert",
+        "source_ref": "v2_rule_notes",
+        "note": "本目录象牙白作为浅色。"
+      }
+    ],
+    "confidence": 0.45,
+    "active": true
+  },
+  {
+    "contract_version": "0.1.0",
+    "rule_set_version": "rules_m1_v2_001",
+    "rule_id": "M1V2-RULE-007",
+    "when_tokens": [
+      "prefer:light"
+    ],
+    "effect": {
+      "target_token": "color:ecru",
+      "score_delta": 1
+    },
+    "exceptions": [],
+    "sources": [
+      {
+        "kind": "internal_expert",
+        "source_ref": "v2_rule_notes",
+        "note": "本目录本白作为浅色。"
+      }
+    ],
+    "confidence": 0.45,
+    "active": true
+  }
+]

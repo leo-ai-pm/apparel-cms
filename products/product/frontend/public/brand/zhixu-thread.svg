@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">知需 · 证据脉络</title>
+  <rect width="64" height="64" rx="17" fill="#EAF5F7"/>
+  <path d="M18 17v12c0 4.4 3.6 8 8 8h9m-17 9V35m27-18v12c0 4.4-3.6 8-8 8h-2" fill="none" stroke="#398A9A" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="18" cy="17" r="4" fill="#fff" stroke="#398A9A" stroke-width="2.6"/>
+  <circle cx="45" cy="17" r="4" fill="#fff" stroke="#398A9A" stroke-width="2.6"/>
+  <circle cx="18" cy="47" r="4" fill="#fff" stroke="#398A9A" stroke-width="2.6"/>
+  <path d="m36 31 8 6-8 6" fill="none" stroke="#398A9A" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,69 @@
+{
+  "contract_version": "0.1.0",
+  "attribute_vocabulary_version": "attrs_m1_v2_001",
+  "tokens": [
+    "color:beige",
+    "color:blue",
+    "color:burgundy",
+    "color:chocolate",
+    "color:ecru",
+    "color:ivory",
+    "color:light",
+    "color:pink",
+    "color:white",
+    "design:asymmetric",
+    "dress_code:formal",
+    "heel:flat",
+    "heel:low",
+    "pattern:stripe",
+    "prefer:casual",
+    "prefer:comfortable",
+    "prefer:light",
+    "prefer:refined",
+    "scene:work_commute",
+    "silhouette:barrel_leg",
+    "silhouette:oversized",
+    "silhouette:sculpted",
+    "silhouette:wide_leg",
+    "style:casual",
+    "style:comfortable",
+    "style:commute",
+    "style:refined",
+    "style:urban_chic",
+    "texture:denim",
+    "texture:draped",
+    "toe:rounded",
+    "toe:soft_square"
+  ],
+  "aliases": {
+    "style:commute": "scene:work_commute",
+    "style:comfortable": "prefer:comfortable"
+  },
+  "expansions": {
+    "color:light": [
+      "color:white",
+      "color:ivory",
+      "color:beige",
+      "color:pink",
+      "color:ecru"
+    ],
+    "prefer:light": [
+      "color:white",
+      "color:ivory",
+      "color:beige",
+      "color:pink",
+      "color:ecru"
+    ],
+    "prefer:casual": [
+      "style:casual"
+    ],
+    "prefer:refined": [
+      "style:refined"
+    ],
+    "prefer:comfortable": [
+      "heel:low",
+      "heel:flat"
+    ]
+  },
+  "notice": "舒适意图仅以已登记鞋跟结构作排序代理，不能宣称穿着舒适或合脚。"
+}

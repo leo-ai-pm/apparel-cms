@@ -1,0 +1,345 @@
+{
+  "schema_version": "pmr-acceptance-expectations/1",
+  "test_only": true,
+  "never_runtime_input": true,
+  "contract_version": "pa-product-reasoning/1.0.0",
+  "input_file": "../runtime-input/feedback-batch-v1.json",
+  "baseline": {
+    "counts": {
+      "raw_record_count": 12,
+      "canonical_feedback_count": 11,
+      "deduplicated_expression_count": 11,
+      "unique_source_count": 11,
+      "duplicate_record_count": 1,
+      "session_count": null
+    },
+    "duplicate_sets": [
+      [
+        "PMR-CASE-01",
+        "PMR-CASE-02"
+      ]
+    ],
+    "groups": [
+      {
+        "reason_code": "size_waist",
+        "scene": "commute",
+        "support_cases": [
+          "PMR-CASE-01",
+          "PMR-CASE-03",
+          "PMR-CASE-10"
+        ],
+        "counterexample_cases": [
+          "PMR-CASE-08"
+        ],
+        "opposing_preference_cases": [],
+        "contextual_cases": [
+          "PMR-CASE-11"
+        ],
+        "support_unique_sources": 3,
+        "proposed_stage": "verify_information",
+        "order_band": 1,
+        "action_kind": "size_information_check",
+        "design_ready": false
+      },
+      {
+        "reason_code": "fit_loose_preference",
+        "scene": "commute",
+        "support_cases": [
+          "PMR-CASE-04",
+          "PMR-CASE-07"
+        ],
+        "counterexample_cases": [
+          "PMR-CASE-08"
+        ],
+        "opposing_preference_cases": [
+          "PMR-CASE-05"
+        ],
+        "contextual_cases": [
+          "PMR-CASE-12"
+        ],
+        "support_unique_sources": 2,
+        "proposed_stage": "segmented_validation",
+        "order_band": 2,
+        "action_kind": "preference_segment_validation",
+        "design_ready": false
+      },
+      {
+        "reason_code": "fit_slim_preference",
+        "scene": "commute",
+        "support_cases": [
+          "PMR-CASE-05"
+        ],
+        "counterexample_cases": [
+          "PMR-CASE-08"
+        ],
+        "opposing_preference_cases": [
+          "PMR-CASE-04",
+          "PMR-CASE-07"
+        ],
+        "contextual_cases": [],
+        "support_unique_sources": 1,
+        "proposed_stage": "segmented_validation",
+        "order_band": 2,
+        "action_kind": "preference_segment_validation",
+        "design_ready": false
+      },
+      {
+        "reason_code": "budget_limit",
+        "scene": "commute",
+        "support_cases": [
+          "PMR-CASE-06",
+          "PMR-CASE-10"
+        ],
+        "counterexample_cases": [],
+        "opposing_preference_cases": [],
+        "contextual_cases": [],
+        "support_unique_sources": 2,
+        "proposed_stage": "verify_information",
+        "order_band": 1,
+        "action_kind": "budget_product_matching",
+        "design_ready": false
+      },
+      {
+        "reason_code": "unresolved",
+        "scene": "commute",
+        "support_cases": [
+          "PMR-CASE-09"
+        ],
+        "counterexample_cases": [],
+        "opposing_preference_cases": [],
+        "contextual_cases": [],
+        "support_unique_sources": 1,
+        "proposed_stage": "clarify_first",
+        "order_band": 3,
+        "action_kind": "clarifying_question",
+        "design_ready": false
+      },
+      {
+        "reason_code": "fit_loose_preference",
+        "scene": "leisure",
+        "support_cases": [
+          "PMR-CASE-12"
+        ],
+        "counterexample_cases": [],
+        "opposing_preference_cases": [],
+        "contextual_cases": [
+          "PMR-CASE-04",
+          "PMR-CASE-07"
+        ],
+        "support_unique_sources": 1,
+        "proposed_stage": "clarify_first",
+        "order_band": 3,
+        "action_kind": "clarifying_question",
+        "design_ready": false
+      }
+    ],
+    "multiple_causes": {
+      "PMR-CASE-10": [
+        "size_waist",
+        "budget_limit"
+      ]
+    },
+    "must_not_assign": {
+      "PMR-CASE-06": [
+        "fit_loose_preference",
+        "fit_slim_preference"
+      ],
+      "PMR-CASE-08": [
+        "fit_loose_preference",
+        "fit_slim_preference"
+      ],
+      "PMR-CASE-09": [
+        "size_waist",
+        "budget_limit"
+      ]
+    },
+    "budget_limits_cny": {
+      "PMR-CASE-06": 250,
+      "PMR-CASE-10": 200
+    },
+    "unknown_requirements": [
+      "真实成衣/人体尺寸",
+      "是否选对尺码",
+      "偏好分段与版型参照",
+      "预算内商品是否可售",
+      "模糊反馈原因"
+    ],
+    "forbidden_claims": [
+      "真实市场需求已验证",
+      "多数偏好应淘汰少数",
+      "统一放大尺码",
+      "真实购买/销量提升",
+      "有数据支持的ROI",
+      "自动形成设计包"
+    ]
+  },
+  "transformations": [
+    {
+      "id": "PMR-M1",
+      "operation": "remove_cases",
+      "cases": [
+        "PMR-CASE-02"
+      ],
+      "expected": {
+        "raw_record_count": 11,
+        "canonical_feedback_count": 11,
+        "deduplicated_expression_count": 11,
+        "unique_source_count": 11,
+        "duplicate_record_count": 0,
+        "semantic_groups_and_actions": "unchanged_ignore_representative_ids"
+      }
+    },
+    {
+      "id": "PMR-M2",
+      "operation": "append_feedback",
+      "item": {
+        "case_id": "PMR-CASE-13",
+        "source_id": "PMR-SRC-12",
+        "origin_event_id": "PMR-EVT-12",
+        "copy_context_from": "PMR-CASE-08",
+        "raw_text": "这条M码腰围合适，通勤时裤腿宽窄正好，不希望加宽或收窄。"
+      },
+      "expected": {
+        "unique_source_count": 12,
+        "canonical_feedback_count": 12,
+        "deduplicated_expression_count": 11,
+        "size_counterexample_unique_sources": 2,
+        "commute_fit_counterexample_unique_sources": 2,
+        "must_update": [
+          "证据引用",
+          "反例来源计数",
+          "支持/反例说明",
+          "result_digest"
+        ],
+        "cannot_strengthen": "不能变成普遍尺码错误或普遍改版结论",
+        "order_may_remain": true
+      }
+    },
+    {
+      "id": "PMR-M3",
+      "operation": "remove_cases",
+      "cases": [
+        "PMR-CASE-05"
+      ],
+      "expected": {
+        "unique_source_count": 10,
+        "remove_supported_group": "fit_slim_preference/commute",
+        "loose_commute_support_unique_sources": 2,
+        "loose_commute_counterexample_unique_sources": 1,
+        "loose_commute_opposing_preference_unique_sources": 0,
+        "loose_commute_proposed_stage": "clarify_first",
+        "loose_commute_action_kind": "clarifying_question",
+        "reason": "仅有一方向偏好和不改版反例，需补分段/参照证据，不能保留不存在的双向验证",
+        "must_update": [
+          "分组",
+          "证据缺口",
+          "建议行动",
+          "result_digest"
+        ]
+      }
+    },
+    {
+      "id": "PMR-M4",
+      "operation": "replace_raw_text",
+      "case_id": "PMR-CASE-09",
+      "raw_text": "裤子不合适。399元超预算，我最多花220元。",
+      "expected": {
+        "unique_source_count": 11,
+        "remove_supported_group": "unresolved/commute",
+        "budget_support_unique_sources": 3,
+        "new_budget_limit_cny": 220,
+        "no_case_id_label_lookup": true
+      }
+    },
+    {
+      "id": "PMR-M5",
+      "operation": "append_feedback",
+      "item": {
+        "case_id": "PMR-CASE-14",
+        "source_id": "PMR-SRC-01",
+        "origin_event_id": "PMR-EVT-13",
+        "copy_context_from": "PMR-CASE-01",
+        "raw_text": "这条M码通勤裤腰部偏紧，我坐着不舒服。"
+      },
+      "expected": {
+        "raw_record_count": 13,
+        "canonical_feedback_count": 12,
+        "deduplicated_expression_count": 12,
+        "unique_source_count": 11,
+        "size_support_canonical_count": 4,
+        "size_support_unique_sources": 3
+      }
+    },
+    {
+      "id": "PMR-M6",
+      "operation": "rename_ids_and_reorder",
+      "expected": {
+        "semantic_groups_and_actions": "unchanged_ignore_identity_values",
+        "must_not_use_case_or_source_id_as_rule": true
+      }
+    },
+    {
+      "id": "PMR-M7",
+      "operation": "replace_raw_text",
+      "case_id": "PMR-CASE-01",
+      "raw_text": "腰围合适，不需要放大；不喜欢宽松裤腿，不希望加宽。",
+      "also_remove_cases": [
+        "PMR-CASE-02"
+      ],
+      "expected": {
+        "no_size_complaint_for_changed_case": true,
+        "no_loose_preference_for_changed_case": true,
+        "quote_must_include_negation": true
+      }
+    },
+    {
+      "id": "PMR-M8",
+      "operation": "append_duplicate_of",
+      "case_id": "PMR-CASE-15",
+      "copy_entire_feedback_from": "PMR-CASE-01",
+      "expected": {
+        "raw_record_count": 13,
+        "canonical_feedback_count": 11,
+        "deduplicated_expression_count": 11,
+        "unique_source_count": 11,
+        "duplicate_record_count": 2,
+        "semantic_groups_and_actions": "unchanged_ignore_duplicate_members"
+      }
+    },
+    {
+      "id": "PMR-M9",
+      "operation": "remove_cases",
+      "cases": [
+        "PMR-CASE-08"
+      ],
+      "expected": {
+        "size_counterexample_unique_sources": 0,
+        "commute_fit_counterexample_unique_sources": 0,
+        "support_sets": "unchanged",
+        "must_update": [
+          "反例引用",
+          "反例来源计数",
+          "无直接反例的证据边界说明",
+          "result_digest"
+        ],
+        "cannot_claim": "不能因删除反例推断普遍需求或自动升P0",
+        "order_may_remain": true
+      }
+    },
+    {
+      "id": "PMR-M10",
+      "operation": "replace_product_and_context",
+      "case_id": "PMR-CASE-08",
+      "product_id": "PMR-PANTS-002",
+      "context_id": "PMR-CTX-PANTS002-COMMUTE-NAVY-M",
+      "expected": {
+        "size_counterexample_unique_sources": 0,
+        "commute_fit_counterexample_unique_sources": 0,
+        "changed_record": "保留原文并说明其他商品仅参考或不适用，不作原商品直接反例",
+        "support_sets": "unchanged",
+        "cannot_claim": "不能因移走适用反例自动升P0或宣称普遍需求"
+      }
+    }
+  ],
+  "transformations_run_from": "每个变体均以原版为起点，单独新输入版/对照批次，不连续累加；新版本保留原记录和原审批历史"
+}

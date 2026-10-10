@@ -1,0 +1,15 @@
+"use client";
+import { useEffect,useRef,useState } from "react";
+import { workbenchApi,sameContext,sameAccess,type Identity,type Access } from "@/features/series-workbench/api";
+import {appPath} from "@/lib/app-path";
+import s from "./team.module.css";
+export function InvitePanel({username,access}:{username:string;access?:Access}){
+ const [verifiedAccess,setVerifiedAccess]=useState(access);
+ const [invite,setInvite]=useState<{code:string;expiresAt:string}|null>(null),[pending,setPending]=useState(false),[error,setError]=useState(""),[copied,setCopied]=useState(false),identity=useRef<Identity|null>(null),busy=useRef(false);
+ useEffect(()=>{const controller=new AbortController();void workbenchApi.me(controller.signal,"manager").then(person=>{if(controller.signal.aborted)return;if(person.user.role!=="manager"||person.user.username!==username){identity.current=null;setInvite(null);setError("身份已变化，请返回工作台重新核对。");return;}identity.current=person;setVerifiedAccess(person.access);}).catch(cause=>{if(!controller.signal.aborted)setError(cause instanceof Error?cause.message:"访问模式暂未核对，请返回工作台重试。");});return()=>controller.abort();},[username]);
+ async function create(){if(busy.current)return;busy.current=true;setPending(true);setError("");try{const person=await workbenchApi.me(undefined,"manager");if(person.user.role!=="manager"||person.user.username!==username||(identity.current&&(!sameContext(identity.current.context,person.context)||!sameAccess(identity.current.access,person.access)))){identity.current=null;setInvite(null);throw new Error("会话已变化，请重新登录后操作。");}if(person.access.mode==="demo")throw new Error("演示访问不创建注册邀请码，请使用员工演示入口。原有团队和任务继续保留。");identity.current??=person;setInvite(await workbenchApi.invite(identity.current));setCopied(false);}catch(cause){setError(cause instanceof Error?cause.message:"创建失败，请重试。");}finally{busy.current=false;setPending(false);}}
+ async function copy(){if(!invite)return;try{await navigator.clipboard.writeText(invite.code);setCopied(true);}catch{setError("无法访问剪贴板，请选中邀请码手动复制。");}}
+ if(verifiedAccess?.mode==="demo")return <div className={s.invitePanel}><p>演示访问使用固定合成身份，登录与注册暂时关闭。团队和任务沿用现有授权；此页不创建邀请码。</p><a href={appPath("/demo/staff")}>进入员工演示</a> · <a href={appPath("/workbench?demo_role=manager")}>返回负责人工作台</a></div>;
+ if(!verifiedAccess)return <div className={s.invitePanel}><p role="status">正在核对团队访问模式…</p>{error&&<p className={s.error} role="alert">{error}</p>}</div>;
+ return <div className={s.invitePanel}><p>邀请码仅用于注册产品人员，一次使用后失效。请按团队约定交给指定人员；账号与任务权限仍由后台核验。</p><button type="button" onClick={()=>void create()} disabled={pending} aria-busy={pending||undefined}>{pending?"正在创建…":invite?"创建另一个邀请码":"创建一次邀请码"}</button>{error&&<p className={s.error} role="alert">{error}</p>}{invite&&<div className={s.inviteResult}><label htmlFor="invite-code">一次邀请码</label><input id="invite-code" readOnly value={invite.code} autoComplete="off" onFocus={e=>e.target.select()}/><small>有效至 {new Date(invite.expiresAt).toLocaleString("zh-CN")} · 注册入口 /register</small><button type="button" onClick={()=>void copy()}>{copied?"已复制邀请码":"复制邀请码"}</button></div>}</div>;
+}

@@ -1,0 +1,16 @@
+import type { NextConfig } from "next";
+
+// Keep all Agent requests on the site's origin.
+const BACKEND = process.env.BACKEND_BASE_URL ?? "http://127.0.0.1:8020";
+
+const nextConfig: NextConfig = {
+  output: "standalone",
+  poweredByHeader: false,
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH ?? "",
+  distDir: process.env.NEXT_DIST_DIR ?? ".next",
+  async rewrites() {
+    return [{ source: "/api/:path*", destination: `${BACKEND}/api/:path*` }];
+  },
+};
+
+export default nextConfig;

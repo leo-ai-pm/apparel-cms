@@ -1,0 +1,868 @@
+{
+  "contract_version": "0.1.0",
+  "catalog_version": "catalog_m1_v2_001",
+  "tenant_id": "tenant_m1_demo",
+  "products": [
+    {
+      "contract_version": "0.1.0",
+      "catalog_version": "catalog_m1_v2_001",
+      "tenant_id": "tenant_m1_demo",
+      "product_id": "M1V2-P-T101",
+      "name": "模拟·奶油白不对称无袖剪裁上衣",
+      "slot": "top",
+      "active": true,
+      "attribute_tokens": [
+        "color:ivory",
+        "design:asymmetric",
+        "scene:work_commute",
+        "silhouette:sculpted",
+        "style:refined",
+        "style:urban_chic"
+      ],
+      "attribute_vocabulary_version": "attrs_m1_v2_001",
+      "origin": {
+        "origin_type": "self_created",
+        "source_name": "M1 v2 审美校准",
+        "source_ref": "v2_self_created_catalog",
+        "is_simulated": true,
+        "rights_confirmed": true
+      }
+    },
+    {
+      "contract_version": "0.1.0",
+      "catalog_version": "catalog_m1_v2_001",
+      "tenant_id": "tenant_m1_demo",
+      "product_id": "M1V2-P-T102",
+      "name": "模拟·蓝白细条纹廓形短袖衬衫",
+      "slot": "top",
+      "active": true,
+      "attribute_tokens": [
+        "color:blue",
+        "pattern:stripe",
+        "scene:work_commute",
+        "silhouette:oversized",
+        "style:casual",
+        "style:urban_chic"
+      ],
+      "attribute_vocabulary_version": "attrs_m1_v2_001",
+      "origin": {
+        "origin_type": "self_created",
+        "source_name": "M1 v2 审美校准",
+        "source_ref": "v2_self_created_catalog",
+        "is_simulated": true,
+        "rights_confirmed": true
+      }
+    },
+    {
+      "contract_version": "0.1.0",
+      "catalog_version": "catalog_m1_v2_001",
+      "tenant_id": "tenant_m1_demo",
+      "product_id": "M1V2-P-B101",
+      "name": "模拟·巧克力色垂坠双褶阔腿长裤",
+      "slot": "bottom",
+      "active": true,
+      "attribute_tokens": [
+        "color:chocolate",
+        "scene:work_commute",
+        "silhouette:wide_leg",
+        "style:refined",
+        "style:urban_chic",
+        "texture:draped"
+      ],
+      "attribute_vocabulary_version": "attrs_m1_v2_001",
+      "origin": {
+        "origin_type": "self_created",
+        "source_name": "M1 v2 审美校准",
+        "source_ref": "v2_self_created_catalog",
+        "is_simulated": true,
+        "rights_confirmed": true
+      }
+    },
+    {
+      "contract_version": "0.1.0",
+      "catalog_version": "catalog_m1_v2_001",
+      "tenant_id": "tenant_m1_demo",
+      "product_id": "M1V2-P-B102",
+      "name": "模拟·本白弧线廓形长牛仔裤",
+      "slot": "bottom",
+      "active": true,
+      "attribute_tokens": [
+        "color:ecru",
+        "scene:work_commute",
+        "silhouette:barrel_leg",
+        "style:casual",
+        "style:urban_chic",
+        "texture:denim"
+      ],
+      "attribute_vocabulary_version": "attrs_m1_v2_001",
+      "origin": {
+        "origin_type": "self_created",
+        "source_name": "M1 v2 审美校准",
+        "source_ref": "v2_self_created_catalog",
+        "is_simulated": true,
+        "rights_confirmed": true
+      }
+    },
+    {
+      "contract_version": "0.1.0",
+      "catalog_version": "catalog_m1_v2_001",
+      "tenant_id": "tenant_m1_demo",
+      "product_id": "M1V2-P-S101",
+      "name": "模拟·酒红细带方头低跟鞋",
+      "slot": "shoes",
+      "active": true,
+      "attribute_tokens": [
+        "color:burgundy",
+        "heel:low",
+        "scene:work_commute",
+        "style:urban_chic",
+        "toe:soft_square"
+      ],
+      "attribute_vocabulary_version": "attrs_m1_v2_001",
+      "origin": {
+        "origin_type": "self_created",
+        "source_name": "M1 v2 审美校准",
+        "source_ref": "v2_self_created_catalog",
+        "is_simulated": true,
+        "rights_confirmed": true
+      }
+    },
+    {
+      "contract_version": "0.1.0",
+      "catalog_version": "catalog_m1_v2_001",
+      "tenant_id": "tenant_m1_demo",
+      "product_id": "M1V2-P-S102",
+      "name": "模拟·象牙白薄底系带休闲鞋",
+      "slot": "shoes",
+      "active": true,
+      "attribute_tokens": [
+        "color:ivory",
+        "heel:flat",
+        "scene:work_commute",
+        "style:casual",
+        "style:urban_chic",
+        "toe:rounded"
+      ],
+      "attribute_vocabulary_version": "attrs_m1_v2_001",
+      "origin": {
+        "origin_type": "self_created",
+        "source_name": "M1 v2 审美校准",
+        "source_ref": "v2_self_created_catalog",
+        "is_simulated": true,
+        "rights_confirmed": true
+      }
+    }
+  ],
+  "skus": [
+    {
+      "contract_version": "0.1.0",
+      "catalog_version": "catalog_m1_v2_001",
+      "tenant_id": "tenant_m1_demo",
+      "sku_id": "M1V2-T101-S",
+      "product_id": "M1V2-P-T101",
+      "slot": "top",
+      "color_token": "color:ivory",
+      "size": {
+        "system": "clothing_alpha",
+        "value": "S"
+      },
+      "price_fen": 24900,
+      "sale_status": "sellable",
+      "attribute_tokens": [
+        "color:ivory",
+        "style:refined"
+      ],
+      "origin": {
+        "origin_type": "self_created",
+        "source_name": "M1 v2 审美校准",
+        "source_ref": "v2_self_created_catalog",
+        "is_simulated": true,
+        "rights_confirmed": true
+      }
+    },
+    {
+      "contract_version": "0.1.0",
+      "catalog_version": "catalog_m1_v2_001",
+      "tenant_id": "tenant_m1_demo",
+      "sku_id": "M1V2-T101-M",
+      "product_id": "M1V2-P-T101",
+      "slot": "top",
+      "color_token": "color:ivory",
+      "size": {
+        "system": "clothing_alpha",
+        "value": "M"
+      },
+      "price_fen": 24900,
+      "sale_status": "sellable",
+      "attribute_tokens": [
+        "color:ivory",
+        "style:refined"
+      ],
+      "origin": {
+        "origin_type": "self_created",
+        "source_name": "M1 v2 审美校准",
+        "source_ref": "v2_self_created_catalog",
+        "is_simulated": true,
+        "rights_confirmed": true
+      }
+    },
+    {
+      "contract_version": "0.1.0",
+      "catalog_version": "catalog_m1_v2_001",
+      "tenant_id": "tenant_m1_demo",
+      "sku_id": "M1V2-T101-L",
+      "product_id": "M1V2-P-T101",
+      "slot": "top",
+      "color_token": "color:ivory",
+      "size": {
+        "system": "clothing_alpha",
+        "value": "L"
+      },
+      "price_fen": 24900,
+      "sale_status": "sellable",
+      "attribute_tokens": [
+        "color:ivory",
+        "style:refined"
+      ],
+      "origin": {
+        "origin_type": "self_created",
+        "source_name": "M1 v2 审美校准",
+        "source_ref": "v2_self_created_catalog",
+        "is_simulated": true,
+        "rights_confirmed": true
+      }
+    },
+    {
+      "contract_version": "0.1.0",
+      "catalog_version": "catalog_m1_v2_001",
+      "tenant_id": "tenant_m1_demo",
+      "sku_id": "M1V2-T101-XL",
+      "product_id": "M1V2-P-T101",
+      "slot": "top",
+      "color_token": "color:ivory",
+      "size": {
+        "system": "clothing_alpha",
+        "value": "XL"
+      },
+      "price_fen": 24900,
+      "sale_status": "sellable",
+      "attribute_tokens": [
+        "color:ivory",
+        "style:refined"
+      ],
+      "origin": {
+        "origin_type": "self_created",
+        "source_name": "M1 v2 审美校准",
+        "source_ref": "v2_self_created_catalog",
+        "is_simulated": true,
+        "rights_confirmed": true
+      }
+    },
+    {
+      "contract_version": "0.1.0",
+      "catalog_version": "catalog_m1_v2_001",
+      "tenant_id": "tenant_m1_demo",
+      "sku_id": "M1V2-T102-S",
+      "product_id": "M1V2-P-T102",
+      "slot": "top",
+      "color_token": "color:blue",
+      "size": {
+        "system": "clothing_alpha",
+        "value": "S"
+      },
+      "price_fen": 22900,
+      "sale_status": "sellable",
+      "attribute_tokens": [
+        "color:blue"
+      ],
+      "origin": {
+        "origin_type": "self_created",
+        "source_name": "M1 v2 审美校准",
+        "source_ref": "v2_self_created_catalog",
+        "is_simulated": true,
+        "rights_confirmed": true
+      }
+    },
+    {
+      "contract_version": "0.1.0",
+      "catalog_version": "catalog_m1_v2_001",
+      "tenant_id": "tenant_m1_demo",
+      "sku_id": "M1V2-T102-M",
+      "product_id": "M1V2-P-T102",
+      "slot": "top",
+      "color_token": "color:blue",
+      "size": {
+        "system": "clothing_alpha",
+        "value": "M"
+      },
+      "price_fen": 22900,
+      "sale_status": "sellable",
+      "attribute_tokens": [
+        "color:blue"
+      ],
+      "origin": {
+        "origin_type": "self_created",
+        "source_name": "M1 v2 审美校准",
+        "source_ref": "v2_self_created_catalog",
+        "is_simulated": true,
+        "rights_confirmed": true
+      }
+    },
+    {
+      "contract_version": "0.1.0",
+      "catalog_version": "catalog_m1_v2_001",
+      "tenant_id": "tenant_m1_demo",
+      "sku_id": "M1V2-T102-L",
+      "product_id": "M1V2-P-T102",
+      "slot": "top",
+      "color_token": "color:blue",
+      "size": {
+        "system": "clothing_alpha",
+        "value": "L"
+      },
+      "price_fen": 22900,
+      "sale_status": "sellable",
+      "attribute_tokens": [
+        "color:blue"
+      ],
+      "origin": {
+        "origin_type": "self_created",
+        "source_name": "M1 v2 审美校准",
+        "source_ref": "v2_self_created_catalog",
+        "is_simulated": true,
+        "rights_confirmed": true
+      }
+    },
+    {
+      "contract_version": "0.1.0",
+      "catalog_version": "catalog_m1_v2_001",
+      "tenant_id": "tenant_m1_demo",
+      "sku_id": "M1V2-T102-XL",
+      "product_id": "M1V2-P-T102",
+      "slot": "top",
+      "color_token": "color:blue",
+      "size": {
+        "system": "clothing_alpha",
+        "value": "XL"
+      },
+      "price_fen": 22900,
+      "sale_status": "sellable",
+      "attribute_tokens": [
+        "color:blue"
+      ],
+      "origin": {
+        "origin_type": "self_created",
+        "source_name": "M1 v2 审美校准",
+        "source_ref": "v2_self_created_catalog",
+        "is_simulated": true,
+        "rights_confirmed": true
+      }
+    },
+    {
+      "contract_version": "0.1.0",
+      "catalog_version": "catalog_m1_v2_001",
+      "tenant_id": "tenant_m1_demo",
+      "sku_id": "M1V2-B101-S",
+      "product_id": "M1V2-P-B101",
+      "slot": "bottom",
+      "color_token": "color:chocolate",
+      "size": {
+        "system": "clothing_alpha",
+        "value": "S"
+      },
+      "price_fen": 27900,
+      "sale_status": "sellable",
+      "attribute_tokens": [
+        "color:chocolate",
+        "style:refined"
+      ],
+      "origin": {
+        "origin_type": "self_created",
+        "source_name": "M1 v2 审美校准",
+        "source_ref": "v2_self_created_catalog",
+        "is_simulated": true,
+        "rights_confirmed": true
+      }
+    },
+    {
+      "contract_version": "0.1.0",
+      "catalog_version": "catalog_m1_v2_001",
+      "tenant_id": "tenant_m1_demo",
+      "sku_id": "M1V2-B101-M",
+      "product_id": "M1V2-P-B101",
+      "slot": "bottom",
+      "color_token": "color:chocolate",
+      "size": {
+        "system": "clothing_alpha",
+        "value": "M"
+      },
+      "price_fen": 27900,
+      "sale_status": "sellable",
+      "attribute_tokens": [
+        "color:chocolate",
+        "style:refined"
+      ],
+      "origin": {
+        "origin_type": "self_created",
+        "source_name": "M1 v2 审美校准",
+        "source_ref": "v2_self_created_catalog",
+        "is_simulated": true,
+        "rights_confirmed": true
+      }
+    },
+    {
+      "contract_version": "0.1.0",
+      "catalog_version": "catalog_m1_v2_001",
+      "tenant_id": "tenant_m1_demo",
+      "sku_id": "M1V2-B101-L",
+      "product_id": "M1V2-P-B101",
+      "slot": "bottom",
+      "color_token": "color:chocolate",
+      "size": {
+        "system": "clothing_alpha",
+        "value": "L"
+      },
+      "price_fen": 27900,
+      "sale_status": "sellable",
+      "attribute_tokens": [
+        "color:chocolate",
+        "style:refined"
+      ],
+      "origin": {
+        "origin_type": "self_created",
+        "source_name": "M1 v2 审美校准",
+        "source_ref": "v2_self_created_catalog",
+        "is_simulated": true,
+        "rights_confirmed": true
+      }
+    },
+    {
+      "contract_version": "0.1.0",
+      "catalog_version": "catalog_m1_v2_001",
+      "tenant_id": "tenant_m1_demo",
+      "sku_id": "M1V2-B101-XL",
+      "product_id": "M1V2-P-B101",
+      "slot": "bottom",
+      "color_token": "color:chocolate",
+      "size": {
+        "system": "clothing_alpha",
+        "value": "XL"
+      },
+      "price_fen": 27900,
+      "sale_status": "sellable",
+      "attribute_tokens": [
+        "color:chocolate",
+        "style:refined"
+      ],
+      "origin": {
+        "origin_type": "self_created",
+        "source_name": "M1 v2 审美校准",
+        "source_ref": "v2_self_created_catalog",
+        "is_simulated": true,
+        "rights_confirmed": true
+      }
+    },
+    {
+      "contract_version": "0.1.0",
+      "catalog_version": "catalog_m1_v2_001",
+      "tenant_id": "tenant_m1_demo",
+      "sku_id": "M1V2-B102-S",
+      "product_id": "M1V2-P-B102",
+      "slot": "bottom",
+      "color_token": "color:ecru",
+      "size": {
+        "system": "clothing_alpha",
+        "value": "S"
+      },
+      "price_fen": 25900,
+      "sale_status": "sellable",
+      "attribute_tokens": [
+        "color:ecru"
+      ],
+      "origin": {
+        "origin_type": "self_created",
+        "source_name": "M1 v2 审美校准",
+        "source_ref": "v2_self_created_catalog",
+        "is_simulated": true,
+        "rights_confirmed": true
+      }
+    },
+    {
+      "contract_version": "0.1.0",
+      "catalog_version": "catalog_m1_v2_001",
+      "tenant_id": "tenant_m1_demo",
+      "sku_id": "M1V2-B102-M",
+      "product_id": "M1V2-P-B102",
+      "slot": "bottom",
+      "color_token": "color:ecru",
+      "size": {
+        "system": "clothing_alpha",
+        "value": "M"
+      },
+      "price_fen": 25900,
+      "sale_status": "sellable",
+      "attribute_tokens": [
+        "color:ecru"
+      ],
+      "origin": {
+        "origin_type": "self_created",
+        "source_name": "M1 v2 审美校准",
+        "source_ref": "v2_self_created_catalog",
+        "is_simulated": true,
+        "rights_confirmed": true
+      }
+    },
+    {
+      "contract_version": "0.1.0",
+      "catalog_version": "catalog_m1_v2_001",
+      "tenant_id": "tenant_m1_demo",
+      "sku_id": "M1V2-B102-L",
+      "product_id": "M1V2-P-B102",
+      "slot": "bottom",
+      "color_token": "color:ecru",
+      "size": {
+        "system": "clothing_alpha",
+        "value": "L"
+      },
+      "price_fen": 25900,
+      "sale_status": "sellable",
+      "attribute_tokens": [
+        "color:ecru"
+      ],
+      "origin": {
+        "origin_type": "self_created",
+        "source_name": "M1 v2 审美校准",
+        "source_ref": "v2_self_created_catalog",
+        "is_simulated": true,
+        "rights_confirmed": true
+      }
+    },
+    {
+      "contract_version": "0.1.0",
+      "catalog_version": "catalog_m1_v2_001",
+      "tenant_id": "tenant_m1_demo",
+      "sku_id": "M1V2-B102-XL",
+      "product_id": "M1V2-P-B102",
+      "slot": "bottom",
+      "color_token": "color:ecru",
+      "size": {
+        "system": "clothing_alpha",
+        "value": "XL"
+      },
+      "price_fen": 25900,
+      "sale_status": "sellable",
+      "attribute_tokens": [
+        "color:ecru"
+      ],
+      "origin": {
+        "origin_type": "self_created",
+        "source_name": "M1 v2 审美校准",
+        "source_ref": "v2_self_created_catalog",
+        "is_simulated": true,
+        "rights_confirmed": true
+      }
+    },
+    {
+      "contract_version": "0.1.0",
+      "catalog_version": "catalog_m1_v2_001",
+      "tenant_id": "tenant_m1_demo",
+      "sku_id": "M1V2-S101-35",
+      "product_id": "M1V2-P-S101",
+      "slot": "shoes",
+      "color_token": "color:burgundy",
+      "size": {
+        "system": "cn_shoe",
+        "value": "35"
+      },
+      "price_fen": 26900,
+      "sale_status": "sellable",
+      "attribute_tokens": [
+        "color:burgundy"
+      ],
+      "origin": {
+        "origin_type": "self_created",
+        "source_name": "M1 v2 审美校准",
+        "source_ref": "v2_self_created_catalog",
+        "is_simulated": true,
+        "rights_confirmed": true
+      }
+    },
+    {
+      "contract_version": "0.1.0",
+      "catalog_version": "catalog_m1_v2_001",
+      "tenant_id": "tenant_m1_demo",
+      "sku_id": "M1V2-S101-36",
+      "product_id": "M1V2-P-S101",
+      "slot": "shoes",
+      "color_token": "color:burgundy",
+      "size": {
+        "system": "cn_shoe",
+        "value": "36"
+      },
+      "price_fen": 26900,
+      "sale_status": "sellable",
+      "attribute_tokens": [
+        "color:burgundy"
+      ],
+      "origin": {
+        "origin_type": "self_created",
+        "source_name": "M1 v2 审美校准",
+        "source_ref": "v2_self_created_catalog",
+        "is_simulated": true,
+        "rights_confirmed": true
+      }
+    },
+    {
+      "contract_version": "0.1.0",
+      "catalog_version": "catalog_m1_v2_001",
+      "tenant_id": "tenant_m1_demo",
+      "sku_id": "M1V2-S101-37",
+      "product_id": "M1V2-P-S101",
+      "slot": "shoes",
+      "color_token": "color:burgundy",
+      "size": {
+        "system": "cn_shoe",
+        "value": "37"
+      },
+      "price_fen": 26900,
+      "sale_status": "sellable",
+      "attribute_tokens": [
+        "color:burgundy"
+      ],
+      "origin": {
+        "origin_type": "self_created",
+        "source_name": "M1 v2 审美校准",
+        "source_ref": "v2_self_created_catalog",
+        "is_simulated": true,
+        "rights_confirmed": true
+      }
+    },
+    {
+      "contract_version": "0.1.0",
+      "catalog_version": "catalog_m1_v2_001",
+      "tenant_id": "tenant_m1_demo",
+      "sku_id": "M1V2-S101-38",
+      "product_id": "M1V2-P-S101",
+      "slot": "shoes",
+      "color_token": "color:burgundy",
+      "size": {
+        "system": "cn_shoe",
+        "value": "38"
+      },
+      "price_fen": 26900,
+      "sale_status": "sellable",
+      "attribute_tokens": [
+        "color:burgundy"
+      ],
+      "origin": {
+        "origin_type": "self_created",
+        "source_name": "M1 v2 审美校准",
+        "source_ref": "v2_self_created_catalog",
+        "is_simulated": true,
+        "rights_confirmed": true
+      }
+    },
+    {
+      "contract_version": "0.1.0",
+      "catalog_version": "catalog_m1_v2_001",
+      "tenant_id": "tenant_m1_demo",
+      "sku_id": "M1V2-S101-39",
+      "product_id": "M1V2-P-S101",
+      "slot": "shoes",
+      "color_token": "color:burgundy",
+      "size": {
+        "system": "cn_shoe",
+        "value": "39"
+      },
+      "price_fen": 26900,
+      "sale_status": "sellable",
+      "attribute_tokens": [
+        "color:burgundy"
+      ],
+      "origin": {
+        "origin_type": "self_created",
+        "source_name": "M1 v2 审美校准",
+        "source_ref": "v2_self_created_catalog",
+        "is_simulated": true,
+        "rights_confirmed": true
+      }
+    },
+    {
+      "contract_version": "0.1.0",
+      "catalog_version": "catalog_m1_v2_001",
+      "tenant_id": "tenant_m1_demo",
+      "sku_id": "M1V2-S101-40",
+      "product_id": "M1V2-P-S101",
+      "slot": "shoes",
+      "color_token": "color:burgundy",
+      "size": {
+        "system": "cn_shoe",
+        "value": "40"
+      },
+      "price_fen": 26900,
+      "sale_status": "sellable",
+      "attribute_tokens": [
+        "color:burgundy"
+      ],
+      "origin": {
+        "origin_type": "self_created",
+        "source_name": "M1 v2 审美校准",
+        "source_ref": "v2_self_created_catalog",
+        "is_simulated": true,
+        "rights_confirmed": true
+      }
+    },
+    {
+      "contract_version": "0.1.0",
+      "catalog_version": "catalog_m1_v2_001",
+      "tenant_id": "tenant_m1_demo",
+      "sku_id": "M1V2-S102-35",
+      "product_id": "M1V2-P-S102",
+      "slot": "shoes",
+      "color_token": "color:ivory",
+      "size": {
+        "system": "cn_shoe",
+        "value": "35"
+      },
+      "price_fen": 24900,
+      "sale_status": "sellable",
+      "attribute_tokens": [
+        "color:ivory"
+      ],
+      "origin": {
+        "origin_type": "self_created",
+        "source_name": "M1 v2 审美校准",
+        "source_ref": "v2_self_created_catalog",
+        "is_simulated": true,
+        "rights_confirmed": true
+      }
+    },
+    {
+      "contract_version": "0.1.0",
+      "catalog_version": "catalog_m1_v2_001",
+      "tenant_id": "tenant_m1_demo",
+      "sku_id": "M1V2-S102-36",
+      "product_id": "M1V2-P-S102",
+      "slot": "shoes",
+      "color_token": "color:ivory",
+      "size": {
+        "system": "cn_shoe",
+        "value": "36"
+      },
+      "price_fen": 24900,
+      "sale_status": "sellable",
+      "attribute_tokens": [
+        "color:ivory"
+      ],
+      "origin": {
+        "origin_type": "self_created",
+        "source_name": "M1 v2 审美校准",
+        "source_ref": "v2_self_created_catalog",
+        "is_simulated": true,
+        "rights_confirmed": true
+      }
+    },
+    {
+      "contract_version": "0.1.0",
+      "catalog_version": "catalog_m1_v2_001",
+      "tenant_id": "tenant_m1_demo",
+      "sku_id": "M1V2-S102-37",
+      "product_id": "M1V2-P-S102",
+      "slot": "shoes",
+      "color_token": "color:ivory",
+      "size": {
+        "system": "cn_shoe",
+        "value": "37"
+      },
+      "price_fen": 24900,
+      "sale_status": "sellable",
+      "attribute_tokens": [
+        "color:ivory"
+      ],
+      "origin": {
+        "origin_type": "self_created",
+        "source_name": "M1 v2 审美校准",
+        "source_ref": "v2_self_created_catalog",
+        "is_simulated": true,
+        "rights_confirmed": true
+      }
+    },
+    {
+      "contract_version": "0.1.0",
+      "catalog_version": "catalog_m1_v2_001",
+      "tenant_id": "tenant_m1_demo",
+      "sku_id": "M1V2-S102-38",
+      "product_id": "M1V2-P-S102",
+      "slot": "shoes",
+      "color_token": "color:ivory",
+      "size": {
+        "system": "cn_shoe",
+        "value": "38"
+      },
+      "price_fen": 24900,
+      "sale_status": "sellable",
+      "attribute_tokens": [
+        "color:ivory"
+      ],
+      "origin": {
+        "origin_type": "self_created",
+        "source_name": "M1 v2 审美校准",
+        "source_ref": "v2_self_created_catalog",
+        "is_simulated": true,
+        "rights_confirmed": true
+      }
+    },
+    {
+      "contract_version": "0.1.0",
+      "catalog_version": "catalog_m1_v2_001",
+      "tenant_id": "tenant_m1_demo",
+      "sku_id": "M1V2-S102-39",
+      "product_id": "M1V2-P-S102",
+      "slot": "shoes",
+      "color_token": "color:ivory",
+      "size": {
+        "system": "cn_shoe",
+        "value": "39"
+      },
+      "price_fen": 24900,
+      "sale_status": "sellable",
+      "attribute_tokens": [
+        "color:ivory"
+      ],
+      "origin": {
+        "origin_type": "self_created",
+        "source_name": "M1 v2 审美校准",
+        "source_ref": "v2_self_created_catalog",
+        "is_simulated": true,
+        "rights_confirmed": true
+      }
+    },
+    {
+      "contract_version": "0.1.0",
+      "catalog_version": "catalog_m1_v2_001",
+      "tenant_id": "tenant_m1_demo",
+      "sku_id": "M1V2-S102-40",
+      "product_id": "M1V2-P-S102",
+      "slot": "shoes",
+      "color_token": "color:ivory",
+      "size": {
+        "system": "cn_shoe",
+        "value": "40"
+      },
+      "price_fen": 24900,
+      "sale_status": "not_sellable",
+      "attribute_tokens": [
+        "color:ivory"
+      ],
+      "origin": {
+        "origin_type": "self_created",
+        "source_name": "M1 v2 审美校准",
+        "source_ref": "v2_self_created_catalog",
+        "is_simulated": true,
+        "rights_confirmed": true
+      }
+    }
+  ],
+  "data_classification": "synthetic",
+  "scope": "M1 data preparation; display only after visual gate"
+}

@@ -1,0 +1,10 @@
+# Runtime only; install/record resolved versions on Linux, never copy macOS venv.
+fastapi>=0.115,<1
+uvicorn>=0.30,<1
+pydantic>=2.7,<3
+sqlalchemy>=2.0,<3
+openai>=1.40,<2
+python-dotenv>=1.0,<2
+httpx>=0.27,<1
+python-multipart>=0.0.9,<1
+pillow>=10,<12

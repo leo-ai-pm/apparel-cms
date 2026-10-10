@@ -1,0 +1,114 @@
+[
+  {
+    "contract_version": "0.1.0",
+    "catalog_version": "catalog_m1_v2_001",
+    "tenant_id": "tenant_m1_demo",
+    "look_id": "M1V2-LOOK-101",
+    "look_asset_version": "look_assets_m1_v2_002",
+    "model_asset_version": "model_user_reference_v2",
+    "items": {
+      "top": "M1V2-T101-M",
+      "bottom": "M1V2-B101-M",
+      "shoes": "M1V2-S101-38"
+    },
+    "image_url": "/data/m1_v2/assets/look_101.png",
+    "image_sha256": "5ee139730b19ebfe9d520db0dd5ad390fd6cb12a7630f8e338abe7959d18119e",
+    "view": "front_full_body",
+    "model_identity_id": "user_reference_model_001",
+    "pose_id": "natural_asymmetric_reference_001",
+    "background_id": "light_gray_studio_v2",
+    "disclaimer_code": "ai_styling_reference_not_fit",
+    "active": true,
+    "origin": {
+      "origin_type": "ai_generated",
+      "source_name": "M1 v2 审美校准",
+      "source_ref": "m1_v2_image_101",
+      "is_simulated": true,
+      "rights_confirmed": true
+    }
+  },
+  {
+    "contract_version": "0.1.0",
+    "catalog_version": "catalog_m1_v2_001",
+    "tenant_id": "tenant_m1_demo",
+    "look_id": "M1V2-LOOK-112",
+    "look_asset_version": "look_assets_m1_v2_002",
+    "model_asset_version": "model_user_reference_v2",
+    "items": {
+      "top": "M1V2-T102-M",
+      "bottom": "M1V2-B102-M",
+      "shoes": "M1V2-S101-38"
+    },
+    "image_url": "/data/m1_v2/assets/look_112.png",
+    "image_sha256": "5c45d7fac17197ae521f9311b4c4f0bc695e88a32df11d8184783c5ff1ea361b",
+    "view": "front_full_body",
+    "model_identity_id": "user_reference_model_001",
+    "pose_id": "natural_asymmetric_reference_001",
+    "background_id": "light_gray_studio_v2",
+    "disclaimer_code": "ai_styling_reference_not_fit",
+    "active": true,
+    "origin": {
+      "origin_type": "ai_generated",
+      "source_name": "M1 v2 审美校准",
+      "source_ref": "m1_v2_image_112",
+      "is_simulated": true,
+      "rights_confirmed": true
+    }
+  },
+  {
+    "contract_version": "0.1.0",
+    "catalog_version": "catalog_m1_v2_001",
+    "tenant_id": "tenant_m1_demo",
+    "look_id": "M1V2-LOOK-113",
+    "look_asset_version": "look_assets_m1_v2_002",
+    "model_asset_version": "model_user_reference_v2",
+    "items": {
+      "top": "M1V2-T102-M",
+      "bottom": "M1V2-B102-M",
+      "shoes": "M1V2-S102-38"
+    },
+    "image_url": "/data/m1_v2/assets/look_113.png",
+    "image_sha256": "b234da92a52b85035022f6c0c8de29d944124d3e9ac8b0ccb98b69f7ffd2cb10",
+    "view": "front_full_body",
+    "model_identity_id": "user_reference_model_001",
+    "pose_id": "natural_asymmetric_reference_001",
+    "background_id": "light_gray_studio_v2",
+    "disclaimer_code": "ai_styling_reference_not_fit",
+    "active": true,
+    "origin": {
+      "origin_type": "ai_generated",
+      "source_name": "M1 v2 审美校准",
+      "source_ref": "m1_v2_image_113",
+      "is_simulated": true,
+      "rights_confirmed": true
+    }
+  },
+  {
+    "contract_version": "0.1.0",
+    "catalog_version": "catalog_m1_v2_001",
+    "tenant_id": "tenant_m1_demo",
+    "look_id": "M1V2-LOOK-116",
+    "look_asset_version": "look_assets_m1_v2_002",
+    "model_asset_version": "model_user_reference_v2",
+    "items": {
+      "top": "M1V2-T102-M",
+      "bottom": "M1V2-B101-M",
+      "shoes": "M1V2-S101-38"
+    },
+    "image_url": "/data/m1_v2/assets/look_116.png",
+    "image_sha256": "bcdf516c2078ada1c04780c922bcc26a77f64fd57f1b987ea39fcc08d3c63772",
+    "view": "front_full_body",
+    "model_identity_id": "user_reference_model_001",
+    "pose_id": "natural_asymmetric_reference_001",
+    "background_id": "light_gray_studio_v2",
+    "disclaimer_code": "ai_styling_reference_not_fit",
+    "active": true,
+    "origin": {
+      "origin_type": "ai_generated",
+      "source_name": "M1 v2 审美校准",
+      "source_ref": "m1_v2_image_116",
+      "is_simulated": true,
+      "rights_confirmed": true
+    }
+  }
+]

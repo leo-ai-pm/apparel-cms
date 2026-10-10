@@ -1,0 +1,11 @@
+.notice { min-width:0; margin:16px 0; padding:16px; border:1px solid var(--ui-border,#ebebef); border-radius:16px; background:#f4f2fb; color:var(--ui-text,#171717); font-size:13px; line-height:1.8; overflow-wrap:anywhere; }
+.notice h3 { margin:0 0 8px; font-size:16px; } .notice p { margin:8px 0; } .hint { color:var(--ui-muted,#6b6874); }
+/* Amber only communicates an actual approval block or unknown eligibility. */
+.paused,.unknown { border-color:#ead9be; background:#fff9ed; color:#80551f; }
+.sources { padding:0; margin:12px 0; list-style:none; }
+.source { min-width:0; margin:12px 0; padding:16px; background:#fff; border:1px solid var(--ui-border,#ebebef); border-radius:16px; color:var(--ui-text,#171717); }
+.source dl { margin:0 0 12px; } .source dl>div { display:grid; grid-template-columns:100px minmax(0,1fr); gap:12px; margin:6px 0; }
+.source dt { color:var(--ui-muted,#6b6874); } .source dd { margin:0; min-width:0; overflow-wrap:anywhere; }
+.sourceButton { min-height:44px; padding:10px 16px; border:1px solid var(--ui-border,#ebebef); border-radius:999px; background:#fff; color:var(--ui-accent,#5433eb); font:inherit; cursor:pointer; }
+.sourceButton:hover:not(:disabled) { background:#f4f2fb; } .sourceButton:focus-visible { outline:3px solid var(--ui-focus,#5433eb); outline-offset:3px; } .sourceButton:disabled { opacity:.5; cursor:not-allowed; }
+@media(max-width:760px) { .source dl>div { grid-template-columns:1fr; gap:2px; } .sourceButton { width:100%; } }

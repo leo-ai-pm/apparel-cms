@@ -1,0 +1,63 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts",
+    ".next-unified/types/**/*.ts",
+    ".next-unified/dev/types/**/*.ts",
+    ".next-partner-series-20261010/types/**/*.ts",
+    ".next-partner-series-20261010/dev/types/**/*.ts",
+    ".next-partner-series-20261010-final/types/**/*.ts",
+    ".next-partner-series-20261010-final/dev/types/**/*.ts",
+    ".next-partner-series-20261010-r2/types/**/*.ts",
+    ".next-partner-series-20261010-r2/dev/types/**/*.ts",
+    ".next-partner-series-20261010-r3/types/**/*.ts",
+    ".next-partner-series-20261010-r3/dev/types/**/*.ts",
+    ".next-partner-series-20261010-r4/types/**/*.ts",
+    ".next-partner-series-20261010-r4/dev/types/**/*.ts",
+    ".next-full-chain-live-20261010-r1/types/**/*.ts",
+    ".next-full-chain-live-20261010-r1/dev/types/**/*.ts",
+    ".next-full-chain-live-20261010-r2/types/**/*.ts",
+    ".next-full-chain-live-20261010-r2/dev/types/**/*.ts",
+    ".next-product-reasoning-20261010-r1/types/**/*.ts",
+    ".next-product-reasoning-20261010-r1/dev/types/**/*.ts",
+    ".next-product-demo-access-20261010-r1/types/**/*.ts",
+    ".next-product-demo-access-20261010-r1/dev/types/**/*.ts",
+    ".next-product-demo-access-20261010-r2/types/**/*.ts",
+    ".next-product-demo-access-20261010-r2/dev/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

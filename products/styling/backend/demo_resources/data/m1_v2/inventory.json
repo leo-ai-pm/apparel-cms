@@ -1,0 +1,158 @@
+{
+  "contract_version": "0.1.0",
+  "catalog_version": "catalog_m1_v2_001",
+  "tenant_id": "tenant_m1_demo",
+  "inventory_snapshot_id": "inv_m1_v2_001_20260905",
+  "captured_at": "2026-09-05T00:00:00+08:00",
+  "valid_until": "2026-09-06T00:00:00+08:00",
+  "is_simulated": true,
+  "items": [
+    {
+      "sku_id": "M1V2-T101-S",
+      "available_qty": 5,
+      "sellable": true
+    },
+    {
+      "sku_id": "M1V2-T101-M",
+      "available_qty": 5,
+      "sellable": true
+    },
+    {
+      "sku_id": "M1V2-T101-L",
+      "available_qty": 5,
+      "sellable": true
+    },
+    {
+      "sku_id": "M1V2-T101-XL",
+      "available_qty": 0,
+      "sellable": true
+    },
+    {
+      "sku_id": "M1V2-T102-S",
+      "available_qty": 5,
+      "sellable": true
+    },
+    {
+      "sku_id": "M1V2-T102-M",
+      "available_qty": 5,
+      "sellable": true
+    },
+    {
+      "sku_id": "M1V2-T102-L",
+      "available_qty": 5,
+      "sellable": true
+    },
+    {
+      "sku_id": "M1V2-T102-XL",
+      "available_qty": 5,
+      "sellable": true
+    },
+    {
+      "sku_id": "M1V2-B101-S",
+      "available_qty": 5,
+      "sellable": true
+    },
+    {
+      "sku_id": "M1V2-B101-M",
+      "available_qty": 5,
+      "sellable": true
+    },
+    {
+      "sku_id": "M1V2-B101-L",
+      "available_qty": 5,
+      "sellable": true
+    },
+    {
+      "sku_id": "M1V2-B101-XL",
+      "available_qty": 5,
+      "sellable": true
+    },
+    {
+      "sku_id": "M1V2-B102-S",
+      "available_qty": 5,
+      "sellable": true
+    },
+    {
+      "sku_id": "M1V2-B102-M",
+      "available_qty": 5,
+      "sellable": true
+    },
+    {
+      "sku_id": "M1V2-B102-L",
+      "available_qty": 5,
+      "sellable": true
+    },
+    {
+      "sku_id": "M1V2-B102-XL",
+      "available_qty": 5,
+      "sellable": false
+    },
+    {
+      "sku_id": "M1V2-S101-35",
+      "available_qty": 0,
+      "sellable": true
+    },
+    {
+      "sku_id": "M1V2-S101-36",
+      "available_qty": 5,
+      "sellable": true
+    },
+    {
+      "sku_id": "M1V2-S101-37",
+      "available_qty": 5,
+      "sellable": true
+    },
+    {
+      "sku_id": "M1V2-S101-38",
+      "available_qty": 5,
+      "sellable": true
+    },
+    {
+      "sku_id": "M1V2-S101-39",
+      "available_qty": 5,
+      "sellable": true
+    },
+    {
+      "sku_id": "M1V2-S101-40",
+      "available_qty": 5,
+      "sellable": true
+    },
+    {
+      "sku_id": "M1V2-S102-35",
+      "available_qty": 5,
+      "sellable": true
+    },
+    {
+      "sku_id": "M1V2-S102-36",
+      "available_qty": 5,
+      "sellable": true
+    },
+    {
+      "sku_id": "M1V2-S102-37",
+      "available_qty": 5,
+      "sellable": true
+    },
+    {
+      "sku_id": "M1V2-S102-38",
+      "available_qty": 5,
+      "sellable": true
+    },
+    {
+      "sku_id": "M1V2-S102-39",
+      "available_qty": 5,
+      "sellable": true
+    },
+    {
+      "sku_id": "M1V2-S102-40",
+      "available_qty": 5,
+      "sellable": true
+    }
+  ],
+  "origin": {
+    "origin_type": "self_created",
+    "source_name": "M1 v2 审美校准",
+    "source_ref": "v2_self_created_inventory",
+    "is_simulated": true,
+    "rights_confirmed": true
+  }
+}

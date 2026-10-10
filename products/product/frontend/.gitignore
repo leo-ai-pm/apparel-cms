@@ -1,0 +1,12 @@
+node_modules/
+.next/
+coverage/
+*.tsbuildinfo
+.env*
+!.env.example
+.local-login-credentials.txt
+data/
+next-env.d.ts
+
+# Isolated local build output (same rule as the standard .next build).
+.next*/
