@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>产品需求 Agent</title>
+<style>
+  :root { --line:#e5e7eb; --muted:#6b7280; --brand:#2563eb; --ok:#16a34a; --warn:#d97706; }
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; margin:0; background:#f9fafb; color:#111827; }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 24px 16px 64px; }
+  h1 { font-size: 20px; }
+  .muted { color: var(--muted); font-size: 13px; }
+  button { cursor:pointer; border:1px solid var(--line); background:#fff; border-radius:8px; padding:8px 14px; font-size:14px; }
+  button.primary { background:var(--brand); color:#fff; border-color:var(--brand); }
+  button:hover { opacity:.9; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:10px; padding:16px; margin-top:16px; }
+  .row { display:flex; gap:16px; flex-wrap:wrap; }
+  .stat { flex:1; min-width:130px; }
+  .stat .num { font-size:24px; font-weight:700; }
+  label { display:block; font-size:13px; color:var(--muted); margin:10px 0 4px; }
+  textarea, input[type=text] { width:100%; border:1px solid var(--line); border-radius:8px; padding:8px; font-size:14px; font-family:inherit; }
+  .tag { display:inline-block; border:1px solid var(--line); border-radius:999px; padding:2px 10px; font-size:12px; margin:2px 4px 2px 0; }
+  .tag.on { background:#dcfce7; border-color:#bbf7d0; }
+  table { width:100%; border-collapse:collapse; font-size:13px; }
+  th,td { text-align:left; padding:8px; border-bottom:1px solid var(--line); }
+  .msg { margin-top:10px; font-size:14px; min-height:20px; }
+  .msg.err { color:#dc2626; }
+  .msg.ok { color:var(--ok); }
+  .hidden { display:none; }
+  code { background:#f3f4f6; padding:1px 6px; border-radius:4px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>产品需求 Agent <span class="muted">（最简版 · 验收界面）</span></h1>
+  <p class="muted">拉取 CMS 需求信号 → 归因去重计数 → 生成证据包 → 回传 CMS</p>
+
+  <div class="card">
+    <button id="pullBtn" class="primary">拉取信号</button>
+    <span class="muted" id="pullHint">从 CMS 读取尚未处理的需求信号</span>
+    <div class="msg" id="pullMsg"></div>
+  </div>
+
+  <div class="card hidden" id="draftCard">
+    <h2>本次拉取结果</h2>
+    <div class="row" id="counts"></div>
+    <div id="attrTags"></div>
+    <p class="muted">去重口径：<code id="dedupKey"></code></p>
+    <p class="muted">本批信号 <span id="signalCount"></span> 条：<span id="signalIds"></span></p>
+
+    <label for="desc">需求描述（requirement_desc，必填）</label>
+    <textarea id="desc" rows="3" placeholder="例：通勤场景下缺少高腰直筒西裤类单品，需新增该品类设计。"></textarea>
+
+    <label for="constraints">约束条件（constraints，一行一条，可增删）</label>
+    <textarea id="constraints" rows="3"></textarea>
+
+    <label><input type="checkbox" id="styleDemand" /> 判定为真实款式需求（style_demand）</label>
+
+    <p><button id="publishBtn" class="primary">生成证据包并回传 CMS</button></p>
+    <div class="msg" id="publishMsg"></div>
+  </div>
+
+  <div class="card">
+    <h2>已回传证据包</h2>
+    <div id="packagesTable" class="muted">（暂无，点击上方"拉取信号"开始）</div>
+  </div>
+
+  <div class="card">
+    <h2>未回传草稿</h2>
+    <div id="draftsTable" class="muted">（暂无）</div>
+  </div>
+</div>
+
+<script>
+let currentDraftId = null;
+
+const $ = (id) => document.getElementById(id);
+
+async function api(path, opts) {
+  const resp = await fetch(path, opts);
+  const data = await resp.json().catch(() => ({}));
+  if (!resp.ok) {
+    const e = data.error || {};
+    throw new Error(e.message || ('HTTP ' + resp.status));
+  }
+  return data;
+}
+
+function show(el, text, ok) {
+  el.textContent = text;
+  el.className = 'msg ' + (ok ? 'ok' : 'err');
+}
+
+function esc(s) {
+  return String(s ?? '').replace(/[&<>"]/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+}
+
+async function loadLists() {
+  const [p, d] = await Promise.all([api('/api/packages'), api('/api/drafts')]);
+
+  $('packagesTable').innerHTML = p.packages.length ? (
+    '<table><tr><th>package_id</th><th>版本</th><th>信号数</th><th>去重口径</th><th></th></tr>' +
+    p.packages.map((x) => `<tr>
+      <td><code>${esc(x.package_id)}</code></td><td>${esc(x.version)}</td>
+      <td>${x.signal_ids.length}</td><td>${esc(x.dedup_key)}</td>
+      <td><button data-rework="${esc(x.package_id)}">返工</button></td>
+    </tr>`).join('') + '</table>'
+  ) : '<span class="muted">（暂无）</span>';
+
+  $('draftsTable').innerHTML = d.drafts.length ? (
+    '<table><tr><th>草稿#</th><th>版本</th><th>信号数</th><th>去重口径</th><th></th></tr>' +
+    d.drafts.map((x) => `<tr>
+      <td>${x.id}</td><td>${esc(x.version)}</td>
+      <td>${x.signal_ids.length}</td><td>${esc(x.dedup_key)}</td>
+      <td><button data-load-draft="${x.id}">继续填写</button></td>
+    </tr>`).join('') + '</table>'
+  ) : '<span class="muted">（暂无）</span>';
+
+  document.querySelectorAll('[data-rework]').forEach((b) =>
+    b.onclick = async () => {
+      try {
+        const r = await api('/api/packages/' + encodeURIComponent(b.dataset.rework) + '/rework', { method: 'POST' });
+        show($('pullMsg'), `已生成返工草稿 #${r.draft_id}（版本 ${r.version}）`, true);
+        await loadLists();
+      } catch (e) { show($('pullMsg'), e.message, false); }
+    }
+  );
+  document.querySelectorAll('[data-load-draft]').forEach((b) =>
+    b.onclick = async () => {
+      try {
+        const row = await api('/api/drafts/' + b.dataset.loadDraft);
+        fillDraft(row);
+      } catch (e) { show($('pullMsg'), e.message, false); }
+    }
+  );
+}
+
+function fillDraft(row) {
+  currentDraftId = row.id;
+  $('draftCard').classList.remove('hidden');
+  $('counts').innerHTML =
+    stat('真实成交 real_purchase', row.sample_count.real_purchase) +
+    stat('模拟加购 simulated_cart', row.sample_count.simulated_cart) +
+    stat('意图 intent', row.sample_count.intent);
+  $('attrTags').innerHTML =
+    tag('供给缺口', row.attribution.supply_gap) +
+    tag('图片缺口', row.attribution.image_gap) +
+    tag('真实款式需求', row.attribution.style_demand);
+  $('dedupKey').textContent = row.dedup_key;
+  $('signalCount').textContent = row.signal_ids.length;
+  $('signalIds').textContent = row.signal_ids.join('、');
+  $('desc').value = row.requirement_desc || '';
+  $('constraints').value = (row.constraints || []).join('\n');
+  $('styleDemand').checked = !!row.attribution.style_demand;
+  $('publishMsg').textContent = '';
+}
+
+function stat(name, n) {
+  return `<div class="stat"><div class="num">${n}</div><div class="muted">${esc(name)}</div></div>`;
+}
+function tag(name, on) {
+  return `<span class="tag ${on ? 'on' : ''}">${esc(name)}${on ? ' ✓' : ''}</span>`;
+}
+
+$('pullBtn').onclick = async () => {
+  try {
+    const r = await api('/api/pull', { method: 'POST' });
+    if (r.new_count === 0) {
+      $('draftCard').classList.add('hidden');
+      show($('pullMsg'), '无新信号（本次没有需要处理的信号）', true);
+    } else {
+      const row = await api('/api/drafts/' + r.draft_id);
+      fillDraft(row);
+      show($('pullMsg'), `拉到 ${r.new_count} 条新信号，已生成草稿 #${r.draft_id}`, true);
+    }
+    await loadLists();
+  } catch (e) { show($('pullMsg'), e.message, false); }
+};
+
+$('publishBtn').onclick = async () => {
+  if (!currentDraftId) return;
+  const constraints = $('constraints').value.split('\n').map((s) => s.trim()).filter(Boolean);
+  const body = {
+    requirement_desc: $('desc').value,
+    constraints: constraints,
+    style_demand: $('styleDemand').checked,
+  };
+  try {
+    const r = await api('/api/drafts/' + currentDraftId + '/publish', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body),
+    });
+    show($('publishMsg'), `已回传：${r.package.package_id}（状态 pending）`, true);
+    $('draftCard').classList.add('hidden');
+    await loadLists();
+  } catch (e) { show($('publishMsg'), e.message, false); }
+};
+
+loadLists();
+</script>
+</body>
+</html>

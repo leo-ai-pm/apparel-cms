@@ -1,0 +1,11 @@
+import s from "./reasoning.module.css";
+
+// Only input semantics locked by the product contract. Analysis is server-owned.
+import type {FeedbackItem,FeedbackBatch} from "@/lib/reasoning-types";
+export type FeedbackInput=FeedbackItem;
+export type BatchInput=FeedbackBatch;
+export const sceneLabel=(scene:string)=>({commute:"通勤",casual:"休闲",leisure:"休闲"}[scene]||scene);
+
+export function InputView({input,prefix="feedback"}:{input:BatchInput;prefix?:string}){return <section className={s.section} aria-label="完整反馈原文"><h3>原话与测试情境</h3><p className={s.muted}>原话完整保留。情境是测试设定，自述不等于已核验的商品问题。</p>{input.items.map(item=><article id={`${prefix}-${item.case_id}`} className={s.evidence} key={item.case_id} tabIndex={-1}><header><strong>{item.case_id}</strong><span className={s.tag}>测试资料</span></header><blockquote>{item.raw_text}</blockquote><p>{sceneLabel(item.context.scene)} · {item.context.variant} · {item.context.selected_size}码 · 测试价 {item.context.listed_price_cny} {item.context.currency}</p><small>来源 {item.source_id} · 原事件 {item.origin_event_id} · 商品 {item.product_id}</small></article>)}</section>;}
+
+export function InputDraft({input,onChange,disabled=false}:{input:BatchInput;onChange:(input:BatchInput)=>void;disabled?:boolean}){return <section className={s.section}><h3>核对测试输入 · 尚未导入</h3><p className={s.muted}>{input.purpose}。编辑后需明确提交服务器；此处不计算建议。</p><div className={s.two}><label>测试批次标识<input value={input.batch_id} disabled={disabled} onChange={e=>onChange({...input,batch_id:e.target.value})}/></label><label>新输入版本<input type="number" min={1} step={1} value={input.input_revision} disabled={disabled} onChange={e=>onChange({...input,input_revision:Number(e.target.value)})}/></label></div><details><summary>核对或修改 {input.items.length} 条原文</summary>{input.items.map((item,index)=><div className={s.inputRow} key={item.case_id}><label htmlFor={`draft-${item.case_id}`}>{item.case_id} · {sceneLabel(item.context.scene)} · {item.context.selected_size}码</label><textarea id={`draft-${item.case_id}`} rows={3} value={item.raw_text} disabled={disabled} onChange={e=>onChange({...input,items:input.items.map((x,i)=>i===index?{...x,raw_text:e.target.value}:x)})}/><button type="button" disabled={disabled} className={s.textButton} onClick={()=>onChange({...input,items:input.items.filter((_,i)=>i!==index)})}>从本次输入移除此条</button></div>)}</details></section>;}

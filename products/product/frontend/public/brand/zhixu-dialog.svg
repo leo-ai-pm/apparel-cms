@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">知需 · 对话洞察</title>
+  <rect width="64" height="64" rx="17" fill="#EAF5F7"/>
+  <path d="M14 20.5A7.5 7.5 0 0 1 21.5 13h21A7.5 7.5 0 0 1 50 20.5v18a7.5 7.5 0 0 1-7.5 7.5H29l-10.5 6v-7A7.5 7.5 0 0 1 14 38.5v-18Z" fill="#fff" stroke="#398A9A" stroke-width="2.6" stroke-linejoin="round"/>
+  <path d="M23 32h7l4-8 4 8h4" fill="none" stroke="#70AFBC" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

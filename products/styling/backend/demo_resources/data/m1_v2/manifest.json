@@ -1,0 +1,43 @@
+{
+  "pack_version": "m1_v2_002",
+  "contract_version": "0.1.0",
+  "tenant_id": "tenant_m1_demo",
+  "baseline_version": "0.4",
+  "data_classification": "synthetic",
+  "asset_mode": "real_files_authorized_and_visually_accepted",
+  "as_of": "2026-09-05T12:00:00+08:00",
+  "acceptance_status": "accepted_by_user",
+  "supersedes": "m1_v2_001",
+  "catalog_version": "catalog_m1_v2_001",
+  "look_asset_version": "look_assets_m1_v2_002",
+  "notice": "用户已通过新版四套素材验收；启用 101、112、113、116。M2 转入独立任务开发。",
+  "remaining_m1": [],
+  "disclaimer": "AI 搭配示意图，不代表用户本人实际试穿或尺码效果",
+  "resource_binding": {
+    "catalog_version": "catalog_m1_v2_001",
+    "inventory_snapshot_id": "inv_m1_v2_001_20260905",
+    "look_asset_version": "look_assets_m1_v2_002",
+    "rule_set_version": "rules_m1_v2_001",
+    "attribute_vocabulary_version": "attrs_m1_v2_001"
+  },
+  "demo_sizes": {
+    "top": {
+      "system": "clothing_alpha",
+      "value": "M"
+    },
+    "bottom": {
+      "system": "clothing_alpha",
+      "value": "M"
+    },
+    "shoes": {
+      "system": "cn_shoe",
+      "value": "38"
+    }
+  },
+  "budget_max_fen": 80000,
+  "scene": "scene:work_commute",
+  "m0_eval_sha256": "17f9c2c4cf5ab476f3365cd862c2920404d03f932b7e6dc331e3659d15aa60e2",
+  "authorization_id": "user_auth_model_reference_20260905",
+  "inventory_clock_policy": "Frozen as_of for checks only. Create a fresh snapshot ID and revalidate before live Demo.",
+  "visual_acceptance_ref": "user_visual_acceptance_20260905"
+}

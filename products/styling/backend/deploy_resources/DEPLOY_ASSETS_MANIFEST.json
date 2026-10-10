@@ -1,0 +1,111 @@
+{
+  "classification": "authorized_synthetic_demo_assets_only",
+  "private_person_images": false,
+  "runtime_databases": false,
+  "files": {
+    "product_visual_specs.json": {
+      "sha256": "7d1f6ed2f2877ec0ae104aa9435481db15de954b634e2031f7bfe637a7a3f7c7",
+      "bytes": 1326
+    },
+    "single-products/assets/PIMG-COV01-B101-v1.jpg": {
+      "sha256": "ee0365df975bd3f77bcaddbd55b514c29a0bd25c5033c7acd8bc95e18bc27740",
+      "bytes": 116252
+    },
+    "single-products/assets/PIMG-COV01-S101-v1.jpg": {
+      "sha256": "697bd09dd7b56771986ec8181c7f8b12b82383f4b7dcf3208b1c83aaf7dbdeff",
+      "bytes": 139100
+    },
+    "single-products/assets/PIMG-COV01-T101-v1.jpg": {
+      "sha256": "b9b7c2401feb95257a319a8ae28e269651f49c9139c85965d4d8d315cdcda855",
+      "bytes": 108972
+    },
+    "single-products/product-image-manifest-v1.json": {
+      "sha256": "847fcee0781df7e0e0a0486fa8ab1b004f45df52664ba2dfe75e884c241a1264",
+      "bytes": 6355
+    },
+    "source-products/P001.png": {
+      "sha256": "01bedea9b5709b36abc7b1d7958071bdb4d52473e9162eb8139ccede23303ae0",
+      "bytes": 1532876
+    },
+    "source-products/P002.png": {
+      "sha256": "76da3f55f282978f97f23f3e01d6c5ade330e425a7df54239c9345c89df2120d",
+      "bytes": 1773691
+    },
+    "source-products/P003.png": {
+      "sha256": "15f64d6e0a8d8ef54a1584f7d3828a88d07aefac5c95ebb656f8bdcd57cbd94e",
+      "bytes": 1852786
+    },
+    "source-products/P004.png": {
+      "sha256": "a76e94b9341564f64d10dece8b7b9ba8a6bc5056bd959871929a6e72be059435",
+      "bytes": 1533813
+    },
+    "source-products/P005.png": {
+      "sha256": "dc4b0c73fa91d047a89bb2518435c1e95e2584ba8baeaf76d44af004dc081e3a",
+      "bytes": 1603275
+    },
+    "source-products/P006.png": {
+      "sha256": "c8165b9a0be77f91008ee7b611c40e8ff4136af99f617b315f32005b96c948ac",
+      "bytes": 1898733
+    },
+    "source-products/P007.png": {
+      "sha256": "dc59f5c14a852bfd14abf83884c92258758fb4c9fa95f555a742ac411eb43044",
+      "bytes": 1509221
+    },
+    "source-products/P008.png": {
+      "sha256": "2e6d029fd2a204b74a209eaa1e0364b050a3e60c5400bf77af7c3a55599f98dc",
+      "bytes": 1443114
+    },
+    "source-products/P009.png": {
+      "sha256": "4e6dab42524251dd09457c9d7d06f0e3e948296328c01ce60eadd8fa2ba59bd9",
+      "bytes": 980273
+    },
+    "source-products/P010.png": {
+      "sha256": "f7dbbbf53722ee00d6e867924cc45adc713d9047968825f5dc8472d10352a435",
+      "bytes": 1463046
+    },
+    "source-products/P011.png": {
+      "sha256": "335a6d3f4e04defdd3df41e4ea24d7804ea3eb520a928ccf0fc92f6cbf0f0118",
+      "bytes": 1356956
+    },
+    "source-products/P012.png": {
+      "sha256": "b544d416b57a65ee997f937125eab64c73766ae37d0e5bf7e57047de24a21953",
+      "bytes": 1262817
+    },
+    "source-products/P013.png": {
+      "sha256": "9f1168492c066ee61e458dd1542c7c5476cab7097fe05d6820207e34cb8eb873",
+      "bytes": 1106790
+    },
+    "source-products/P014.png": {
+      "sha256": "5850bab1bc66ffaec5bccdf8599e90edf94bda54c61ebad57d2f3028dde048e7",
+      "bytes": 1224311
+    },
+    "source-products/P015.png": {
+      "sha256": "4bed6598410db4026a1837b02263082de71a64e6bf21dd56f8bf38fe206ef239",
+      "bytes": 834611
+    },
+    "source-products/P016.png": {
+      "sha256": "2a199b44b1eec77ef1e04fb306aac8aa705a7ce98e739ab1c1efce5839c7466c",
+      "bytes": 1797840
+    },
+    "source-products/P017.png": {
+      "sha256": "1968cba0aa307f5ae9331be3fbe7cb973a6ae12824c25ff58fd78effa329f9d1",
+      "bytes": 1243067
+    },
+    "source-products/P018.png": {
+      "sha256": "6d26c36ede657cc3de5a5cc89c5a48e0810f82da43a1f4943af142ab592d167a",
+      "bytes": 741854
+    },
+    "source-products/P019.png": {
+      "sha256": "7ad756071f66ad522a7f0e5332b154e0662927890bac6f08b41471643c4831fc",
+      "bytes": 1062445
+    },
+    "source-products/P020.png": {
+      "sha256": "0019b7430f752339adf64ce65b91298a4620f046695398b58291a687a0814116",
+      "bytes": 1449505
+    },
+    "source-products/P021.png": {
+      "sha256": "d53d8232cd81d65f3fc42a97cf473fb57d49229db9707ebd477fc3016f2813c6",
+      "bytes": 1490302
+    }
+  }
+}

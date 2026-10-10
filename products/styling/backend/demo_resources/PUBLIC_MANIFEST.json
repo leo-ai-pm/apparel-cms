@@ -1,0 +1,99 @@
+{
+  "classification": "synthetic_demo_with_authorized_ai_generated_fixed_outfit_assets",
+  "private_reference_images_included": false,
+  "runtime_databases_included": false,
+  "files": {
+    "m2/__init__.py": {
+      "bytes": 73,
+      "sha256": "33555eb82d7ec1911ea528b115ec0b00dd7f0f948d0c7ac5beff2d217479bb0a"
+    },
+    "m2/core.py": {
+      "bytes": 57928,
+      "sha256": "5a4bcad40f3051a695b3697ff0235d532d78d62bc9723b81aab7f975df5c99b7"
+    },
+    "m2/config.py": {
+      "bytes": 2875,
+      "sha256": "cb1f6299808321f100eb53c2f163a59b316c2724991633ab6c64dc308dd7244b"
+    },
+    "m2/model.py": {
+      "bytes": 55501,
+      "sha256": "a9cb57ccbbab866f2acc6bc40ea9bb0282c889480782e2385e766b336f5ead0e"
+    },
+    "m2/runtime.py": {
+      "bytes": 5322,
+      "sha256": "f640b80807bad17655853d49850efba1353479709d355ddbb0bf2db7cf7a41c9"
+    },
+    "m2/storage.py": {
+      "bytes": 3483,
+      "sha256": "421b9777968d259503010777c80252b283db01f37ca4d2164241d7a8668c7df7"
+    },
+    "m2/service.py": {
+      "bytes": 11659,
+      "sha256": "5290e9af9f1fe95e01ed4c45ed97c93c9512775466a1eff15d2b862ef0081b2b"
+    },
+    "m2/dialogue.py": {
+      "bytes": 14867,
+      "sha256": "ec8b06b253d93afaaa6b6571b87d2053c01e702c4032f07cf5dd48a3d223a053"
+    },
+    "m2/consultation.py": {
+      "bytes": 14246,
+      "sha256": "990585352ed7c4a5870e05ba6ee7d986b5e753a9af904f214c990b7a0783c684"
+    },
+    "m2/profile_context.py": {
+      "bytes": 4404,
+      "sha256": "4c147a02464a0801cadc71d89c1b43d1d4ab2bf5d7faa8487ce7cdf4a630de2f"
+    },
+    "m2/catalog.py": {
+      "bytes": 7632,
+      "sha256": "e966e96a7b463621b1a74172aff329768ce86931216032ffd3a1391841a22c92"
+    },
+    "m2/cart.py": {
+      "bytes": 7269,
+      "sha256": "e22fce56af5106168a313f101262d949cd8dd18d918bfe9f927101d338e93892"
+    },
+    "data/m1_v2/manifest.json": {
+      "bytes": 1568,
+      "sha256": "0ab0aa95e2164819ebe5c86447f6fd9f24dd1c23a02212f7984ebd165ad0a4b3"
+    },
+    "data/m1_v2/catalog.json": {
+      "bytes": 23868,
+      "sha256": "1c6a3ca00e60c53112ef4d7460a92a922f6e27abedc3e942bcb46ffe987b9273"
+    },
+    "data/m1_v2/inventory.json": {
+      "bytes": 3113,
+      "sha256": "ebc9ca3defd095e6a8ef18bd01cd068f519ed026e02acf27fb418891e54d3cfc"
+    },
+    "data/m1_v2/look_assets.json": {
+      "bytes": 3859,
+      "sha256": "5def46729835615e972d15562cdf8d821706039eebd700adbe370092fb35858c"
+    },
+    "data/m1_v2/attribute_vocabulary.json": {
+      "bytes": 1483,
+      "sha256": "dfb512cc1e5ca1c58e7953b8a367d89ebecd8617eb86becb9069eca523019896"
+    },
+    "data/m1_v2/styling_rules.json": {
+      "bytes": 3514,
+      "sha256": "1bb42d0eacd670c260bbb199303ed9858d38c7d63d7126c9720f630d3a7a7cd8"
+    },
+    "data/m1_v2/provenance/user_visual_acceptance.json": {
+      "bytes": 2070,
+      "sha256": "28e26be9f098d3bd5230fd2fb9a75309e259e8091d0c678bf95e4d2c847e42bb"
+    },
+    "data/m1_v2/assets/look_101.png": {
+      "bytes": 1859319,
+      "sha256": "5ee139730b19ebfe9d520db0dd5ad390fd6cb12a7630f8e338abe7959d18119e"
+    },
+    "data/m1_v2/assets/look_112.png": {
+      "bytes": 1820109,
+      "sha256": "5c45d7fac17197ae521f9311b4c4f0bc695e88a32df11d8184783c5ff1ea361b"
+    },
+    "data/m1_v2/assets/look_113.png": {
+      "bytes": 1866316,
+      "sha256": "b234da92a52b85035022f6c0c8de29d944124d3e9ac8b0ccb98b69f7ffd2cb10"
+    },
+    "data/m1_v2/assets/look_116.png": {
+      "bytes": 1820387,
+      "sha256": "bcdf516c2078ada1c04780c922bcc26a77f64fd57f1b987ea39fcc08d3c63772"
+    }
+  }
+}

@@ -1,0 +1,179 @@
+{
+  "schema": "product_image_assets_v1",
+  "assets": [
+    {
+      "asset_id": "PIMG-COV01-T101-v1",
+      "asset_version": 1,
+      "tenant_id": "tenant_m1_demo",
+      "catalog_version": "catalog_m1_v2_001",
+      "product_id": "M1V2-P-T101",
+      "sku_ids": [
+        "M1V2-T101-M"
+      ],
+      "kind": "product_single_image",
+      "representation": "style_color_reference",
+      "file_name": "PIMG-COV01-T101-v1.jpg",
+      "image_sha256": "b9b7c2401feb95257a319a8ae28e269651f49c9139c85965d4d8d315cdcda855",
+      "mime_type": "image/jpeg",
+      "width": 1024,
+      "height": 1024,
+      "byte_size": 108972,
+      "origin": {
+        "origin_type": "ai_generated",
+        "source_name": "Codex built-in imagegen",
+        "source_ref": "exec-294550c5-ac75-49bf-b237-1142a8b50566",
+        "is_simulated": true,
+        "rights_confirmed": true
+      },
+      "reference": {
+        "look_id": "M1V2-LOOK-101",
+        "look_image_sha256": "5ee139730b19ebfe9d520db0dd5ad390fd6cb12a7630f8e338abe7959d18119e",
+        "visual_spec_sha256": "7d1f6ed2f2877ec0ae104aa9435481db15de954b634e2031f7bfe637a7a3f7c7",
+        "visual_spec_product_id": "M1V2-P-T101",
+        "prompt_version": "cover01a-single-product-v1",
+        "tool_version": "builtin-imagegen-20261010"
+      },
+      "generation_record": {
+        "provider": "builtin_image_gen",
+        "model": "tool_managed_not_exposed",
+        "job_id": "exec-294550c5-ac75-49bf-b237-1142a8b50566",
+        "requested_images": 1,
+        "returned_images": 1,
+        "attempts": 1,
+        "completed_at": "2026-10-10T04:36:49.254040+08:00",
+        "cost": {
+          "status": "unknown",
+          "amount": null,
+          "currency": null,
+          "reason": "Built-in tool does not expose provider model or billing totals."
+        }
+      },
+      "state": "agent_checked_preview",
+      "checks": {
+        "checked_by": "backend_agent",
+        "checked_at": "2026-10-09T20:40:39.595400Z",
+        "technical_passed": true,
+        "visual_passed": true,
+        "evidence_ref": "asset-ledger.json"
+      },
+      "user_review": "pending",
+      "accepted_by_user": false
+    },
+    {
+      "asset_id": "PIMG-COV01-B101-v1",
+      "asset_version": 1,
+      "tenant_id": "tenant_m1_demo",
+      "catalog_version": "catalog_m1_v2_001",
+      "product_id": "M1V2-P-B101",
+      "sku_ids": [
+        "M1V2-B101-M"
+      ],
+      "kind": "product_single_image",
+      "representation": "style_color_reference",
+      "file_name": "PIMG-COV01-B101-v1.jpg",
+      "image_sha256": "ee0365df975bd3f77bcaddbd55b514c29a0bd25c5033c7acd8bc95e18bc27740",
+      "mime_type": "image/jpeg",
+      "width": 1024,
+      "height": 1024,
+      "byte_size": 116252,
+      "origin": {
+        "origin_type": "ai_generated",
+        "source_name": "Codex built-in imagegen",
+        "source_ref": "exec-45e99c25-4829-4596-98fc-c71e1dbe31e7",
+        "is_simulated": true,
+        "rights_confirmed": true
+      },
+      "reference": {
+        "look_id": "M1V2-LOOK-101",
+        "look_image_sha256": "5ee139730b19ebfe9d520db0dd5ad390fd6cb12a7630f8e338abe7959d18119e",
+        "visual_spec_sha256": "7d1f6ed2f2877ec0ae104aa9435481db15de954b634e2031f7bfe637a7a3f7c7",
+        "visual_spec_product_id": "M1V2-P-B101",
+        "prompt_version": "cover01a-single-product-v1",
+        "tool_version": "builtin-imagegen-20261010"
+      },
+      "generation_record": {
+        "provider": "builtin_image_gen",
+        "model": "tool_managed_not_exposed",
+        "job_id": "exec-45e99c25-4829-4596-98fc-c71e1dbe31e7",
+        "requested_images": 1,
+        "returned_images": 1,
+        "attempts": 1,
+        "completed_at": "2026-10-10T04:37:56.797228+08:00",
+        "cost": {
+          "status": "unknown",
+          "amount": null,
+          "currency": null,
+          "reason": "Built-in tool does not expose provider model or billing totals."
+        }
+      },
+      "state": "agent_checked_preview",
+      "checks": {
+        "checked_by": "backend_agent",
+        "checked_at": "2026-10-09T20:40:39.595400Z",
+        "technical_passed": true,
+        "visual_passed": true,
+        "evidence_ref": "asset-ledger.json"
+      },
+      "user_review": "pending",
+      "accepted_by_user": false
+    },
+    {
+      "asset_id": "PIMG-COV01-S101-v1",
+      "asset_version": 1,
+      "tenant_id": "tenant_m1_demo",
+      "catalog_version": "catalog_m1_v2_001",
+      "product_id": "M1V2-P-S101",
+      "sku_ids": [
+        "M1V2-S101-38"
+      ],
+      "kind": "product_single_image",
+      "representation": "style_color_reference",
+      "file_name": "PIMG-COV01-S101-v1.jpg",
+      "image_sha256": "697bd09dd7b56771986ec8181c7f8b12b82383f4b7dcf3208b1c83aaf7dbdeff",
+      "mime_type": "image/jpeg",
+      "width": 1024,
+      "height": 1024,
+      "byte_size": 139100,
+      "origin": {
+        "origin_type": "ai_generated",
+        "source_name": "Codex built-in imagegen",
+        "source_ref": "exec-38d7904d-b975-4c14-885a-57199a91fb18",
+        "is_simulated": true,
+        "rights_confirmed": true
+      },
+      "reference": {
+        "look_id": "M1V2-LOOK-101",
+        "look_image_sha256": "5ee139730b19ebfe9d520db0dd5ad390fd6cb12a7630f8e338abe7959d18119e",
+        "visual_spec_sha256": "7d1f6ed2f2877ec0ae104aa9435481db15de954b634e2031f7bfe637a7a3f7c7",
+        "visual_spec_product_id": "M1V2-P-S101",
+        "prompt_version": "cover01a-single-product-v1",
+        "tool_version": "builtin-imagegen-20261010"
+      },
+      "generation_record": {
+        "provider": "builtin_image_gen",
+        "model": "tool_managed_not_exposed",
+        "job_id": "exec-38d7904d-b975-4c14-885a-57199a91fb18",
+        "requested_images": 1,
+        "returned_images": 1,
+        "attempts": 1,
+        "completed_at": "2026-10-10T04:40:13.999983+08:00",
+        "cost": {
+          "status": "unknown",
+          "amount": null,
+          "currency": null,
+          "reason": "Built-in tool does not expose provider model or billing totals."
+        }
+      },
+      "state": "agent_checked_preview",
+      "checks": {
+        "checked_by": "backend_agent",
+        "checked_at": "2026-10-09T20:40:39.595400Z",
+        "technical_passed": true,
+        "visual_passed": true,
+        "evidence_ref": "asset-ledger.json"
+      },
+      "user_review": "pending",
+      "accepted_by_user": false
+    }
+  ]
+}
